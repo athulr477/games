@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDNIGHT RUN // VECTOR</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui-layer">
+            <div class="hud-box">
+                <div class="hud-value" id="score">0m</div>
+                <div class="hud-label">DISTANCE</div>
+            </div>
+            <div class="hud-box" id="center-hud">
+                <div class="hud-value" id="stamina-value">100</div>
+                <div id="energy-container">
+                    <div id="energy-fill"></div>
+                </div>
+                <div id="energy-label">STAMINA</div>
+            </div>
+            <div class="hud-box" style="text-align: right;">
+                <div class="hud-value" id="high-score">0m</div>
+                <div class="hud-label">SERVER RECORD</div>
+            </div>
+        </div>
+
+        <div id="story-overlay">
+            <div id="story-title" class="story-text">SECTOR 1</div>
+            <div id="story-sub" class="story-sub">THE ESCAPE</div>
+        </div>
+
+        <div id="start-screen">
+            <h1 id="title-text">MIDNIGHT RUN</h1>
+            <div id="currency-display" style="color:#ffff00; font-size: 24px; margin-bottom: 20px;">BOLTS: <span id="bolt-amount">...</span></div>
+            
+            <p id="sub-text">
+                UP: JUMP // DOWN: SLIDE<br>
+                WARNING: POLICE LASER IN PURSUIT
+            </p>
+            
+            <div id="shop-container" style="display:flex; gap:20px; margin-bottom: 30px;">
+                <button id="buy-skin-btn" class="shop-btn" style="font-size:16px; padding:10px 20px;">
+                    RED NEON SKIN<br><span style="color:#ffff00">50 BOLTS</span>
+                </button>
+                <button id="buy-stamina-btn" class="shop-btn" style="font-size:16px; padding:10px 20px;">
+                    MAX STAMINA UP<br><span style="color:#ffff00">100 BOLTS</span>
+                </button>
+            </div>
+
+            <button id="start-btn">INITIATE RUN</button>
+            <div id="msg-area" style="color:red; margin-top:10px; height:20px;"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
